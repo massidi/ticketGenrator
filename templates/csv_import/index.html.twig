@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="frame">
+        <div class="center">
+            <div class="title">
+                <h1>Drop file to upload</h1>
+            </div>
+
+            <div class="dropzone">
+                <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                <form action="{{ path('csv_import_import') }}" method="post" enctype="multipart/form-data">
+                    <input type="file" name="csv_file" accept=".csv">
+                    <button type="submit">Import</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
